@@ -6,3 +6,8 @@
 + RegGetQword
 + RegGetWString
 + getWindowsBuildNumber
+
+#### bindProcessToCores
+
++ GetProcessHandleByName
++ main to bind process to cores
