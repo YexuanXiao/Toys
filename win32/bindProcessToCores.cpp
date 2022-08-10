@@ -9,7 +9,7 @@ namespace bind_process_core {
 
 	inline HANDLE GetProcessHandleByName(LPCWSTR process_name) // 根据 exe 名查找进程句柄
 	{
-		PROCESSENTRY32W entry;
+		PROCESSENTRY32W entry{};
 		entry.dwSize = sizeof(entry);
 		HANDLE handle = 0;
 		auto const snapshot = ::CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0); // 创建进程快照
